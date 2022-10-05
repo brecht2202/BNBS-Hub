@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BNBS-Hub</title>
+
+    <link rel="icon" type="image/x-icon" href="archive\icon-favicon\favicon.png">
+
+    <link rel="stylesheet" href="index.css">
+
+    <script defer src="js/index-initializeSites.js"></script>
+    <script defer src="js/index-initializeCollections.js"></script>
+    <script defer src="js/index.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style>
+
+
+        .iframe-rwd  {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+
+            max-width: 100%;
+            max-width: max-content;
+            max-height: 100%;
+            max-height: max-content;
+        }
+        .iframe-rwd iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #navbar-top {
+            transition: margin-left .5s;
+            /*padding: 16px;*/
+        }
+        #navbar-top-sidebar-openbutton {
+            transition: visibility 5s;
+            transition-delay: 5s;
+        }
+
+        #sidebar-left {
+            /*transition: opacity 1000ms;*/
+            transition: opacity 10000ms;
+            opacity: 0;
+        }
+
+        #sidebar-left-main {
+            /*background-color: red;*/
+            opacity: 0;
+            transition: opacity 300ms;
+            transitionDelay: 150ms;
+            visibility: collapse;
+        }
+
+        #section-main {
+            transition: margin-left .5s;
+            /*padding: 16px;*/
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<nav>
+
+    <div id="navbar-top">
+
+        <div id="navbar-top-sidebar-openbutton">
+<!--            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar-->
+            <div>
+                <button class="sidebar-openbtn" id="sidebar-openbtn" onclick="openSidebar()">☰</button>
+            </div>
+
+<!--            <button class="sidebar-openbtn" onclick="openSidebar()">☰ Open Sidebar</button>-->
+        </div>
+
+        <div class="navbar-top-left">
+
+        </div>
+
+        <div class="navbar-top-title-box">
+            <div class="navbar-top-title-box-text">
+<!--                <a href="#">-->
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <p>BNBS-Hub</p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="navbar-top-right">
+            <div class="navbar-top-right-text">
+<!--                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">-->
+<!--                    <h1>BNBS</h1>-->
+<!--                    <p>Corporations</p>-->
+<!--                </a>-->
+                <a id="Toggle_DarkMode">
+<!--                    <p>🌙</p>-->
+                </a>
+                <div id="test-userprofile"></div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div>
+        <div id="sidebar-left" class="sidebar">
+            <a href="javascript:void(0)" class="sidebar-closebtn" onclick="closeSidebar()">×</a>
+
+            <!--        <a href="#">About</a>-->
+            <!--        <a href="#">Services</a>-->
+            <!--        <a href="#">Clients</a>-->
+            <!--        <a href="#">Contact</a>-->
+
+            <div id="sidebar-left-main">
+                <div id="sidebar-left-main-header" >
+                    <h1>ALL SITES</h1>
+                </div>
+
+                <div>
+<!--                    https://www.w3schools.com/howto/howto_js_filter_lists.asp-->
+<!--                    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_list-->
+
+                    <div id="sidebar-left-main-searchOptions">
+                        <input type="text" id="Input_searchAllSites" placeholder="Search for sites..." title="Search for sites...">
+                        <a id="Toggle_searchAllSites_Sorter">
+                            <p>⥮</p>
+                        </a>
+                    </div>
+
+
+<!--                    <ul id="myUL">-->
+<!--                        <li><a href="#">Adele</a></li>-->
+<!--                        <li><a href="#">Agnes</a></li>-->
+
+<!--                        <li><a href="#">Billy</a></li>-->
+<!--                        <li><a href="#">Bob</a></li>-->
+
+<!--                        <li><a href="#">Calvin</a></li>-->
+<!--                        <li><a href="#">Christina</a></li>-->
+<!--                        <li><a href="#">Cindy</a></li>-->
+<!--                    </ul>-->
+
+<!--                    <script>-->
+<!--                        function searchAllSites() {-->
+<!--                            var input, filter, ul, li, a, i, txtValue;-->
+<!--                            input = document.getElementById("Input_searchAllSites");-->
+<!--                            filter = input.value.toUpperCase();-->
+<!--                            ul = document.getElementById("List_AllSites");-->
+<!--                            li = ul.getElementsByTagName("li");-->
+<!--                            for (i = 0; i < li.length; i++) {-->
+<!--                                a = li[i].getElementsByTagName("a")[0];-->
+<!--                                txtValue = a.textContent || a.innerText;-->
+<!--                                if (txtValue.toUpperCase().indexOf(filter) > -1) {-->
+<!--                                    li[i].style.display = "";-->
+<!--                                } else {-->
+<!--                                    li[i].style.display = "none";-->
+<!--                                }-->
+<!--                            }-->
+<!--                        }-->
+<!--                    </script>-->
+
+
+                    <ul id="List_AllSites">
+                        <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_AllSites">
+
+<!--                            <li>-->
+<!--                                <a href="${propertyHyperlink}" class="sitelink">-->
+<!--                                    <img class="icon" src="${propertyIconPathFull}">-->
+<!--                                    <p>Adele</p>-->
+<!--                                </a>-->
+<!--                            </li>-->
+
+<!--                            <li>-->
+<!--                                <a href="${propertyHyperlink}" class="sitelink">-->
+<!--                                    <img class="icon" src="${propertyIconPathFull}">-->
+<!--                                    <p>Agnes</p>-->
+<!--                                </a>-->
+<!--                            </li>-->
+
+<!--                            <li><a href="#">Adele</a></li>-->
+<!--                            <li><a href="#">Agnes</a></li>-->
+
+
+                        </div>
+                    </ul>
+
+                </div>
+
+
+<!--                <div>-->
+<!--                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_AllSites">-->
+<!--                        &lt;!&ndash;                        <p><a href="">Empty</a></p>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div>-->
+
+<!--                </div>-->
+            </div>
+
+        </div>
+
+        <script>
+
+        </script>
+    </div>
+
+</nav>
+
+
+
+<!-- <div style="position: fixed; z-index: -99; width: 100%; height: 100%"> -->
+	<!-- <iframe frameborder="0" height="100%" width="100%" src="https://www.youtube.com/embed/e1mZ2LO1vzQ?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&autohide=1&wmode=transparent&hd=1"></iframe> -->
+<!-- </div> -->
+
+
+<!--        === === === === === === ===        -->
+<!--        === === === === === === ===        -->
+<!--        === === === === === === ===        -->
+
+
+<!--Zoom webpage out to 75%. This is how much I want to be able to see.-->
+
+
+<!--        === === === === === === ===        -->
+<!--        === === === === === === ===        -->
+<!--        === === === === === === ===        -->
+
+
+<!--<div id="main"></div>-->
+
+<section id="section-main">
+
+    <div class="main-grid">
+
+
+        <!-- === === === === === === === === === === === === -->
+        <div class="main-grid-row">
+
+<!--            === Social Media ===-->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Social Media</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_SocialMedia">
+                        <p><a href="">Empty</a></p>
+<!--                        <div>-->
+<!--                            <img class="icon" src="archive/icons/youtube.png" alt="">-->
+<!--                            <a href="https://www.youtube.com/">Youtube</a>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img class="icon" src="archive/icons/facebook-messenger.png" alt="">-->
+<!--                            <a href="https://www.messenger.com/">Messenger</a>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img class="icon" src="archive/icons/instagram.png" alt="">-->
+<!--                            <a href="https://www.instagram.com/">Instagram</a>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img class="icon" src="archive/icons/tiktok-rounded.png" alt="">-->
+<!--                            <a href="https://www.tiktok.com/">TikTok</a>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--&lt;!&ndash;                            <img class="icon" src="archive/icons/#.png" alt="">&ndash;&gt;-->
+<!--                            <a href="">Empty</a>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--&lt;!&ndash;                            <img class="icon" src="archive/icons/#.png" alt="">&ndash;&gt;-->
+<!--                            <a href="">Empty</a>-->
+<!--                        </div>-->
+                    </div>
+
+                </div>
+
+            </div>
+
+<!--            === QuickLinks ===-->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Quick Links</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_QuickLinks">
+                        <p><a href="">Empty</a></p>
+<!--                        <div><a href="https://www.google.com">Google</a></div>-->
+<!--                        <div><a href="https://www.youtube.com">Youtube</a></div>-->
+<!--                        <div><img class="icon" src="archive/icons/facebook-messenger.png" alt="">-->
+<!--                            <a href="https://www.messenger.com/">Messenger</a></div>-->
+<!--                        <div><a href="https://www.brandonfowler.me/skyblockah/?sort=lowest&bin=yes&player=brecht2202">SB AH - brandonfowler</a></div>-->
+<!--                        <div><a href="">Empty</a></div>-->
+                    </div>
+
+                </div>
+
+            </div>
+
+<!--            === Entertainment ===-->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Entertainment</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-grid-box-subcontainer-vertical">
+
+<!--                        === Video Sites ===-->
+                        <div class="main-grid-box-subcontainer-vertical-sub">
+                            <h2>Video Sites</h2>
+                            <hr>
+                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_VideoSites">
+                                <p><a href="">Empty</a></p>
+                            </div>
+                        </div>
+
+<!--                        <hr>-->
+
+<!--                        === Music Platforms ===-->
+                        <div class="main-grid-box-subcontainer-vertical-sub">
+                            <h2>Music Platforms</h2>
+                            <hr>
+                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_MusicPlatforms">
+                                <p><a href="">Empty</a></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- === === === === === === === === === === === === -->
+
+
+        <!-- === === === === === GAMES === === === === === -->
+        <div class="main-grid-row">
+
+            <!--            === GAMES === -->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Gaming</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-grid-box-subcontainer">
+
+                        <!--                        === Skyblock ===-->
+                        <div class="main-grid-box-subcontainer-sub">
+                            <h2>Skyblock</h2>
+                            <hr>
+                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_HypixelSkyblock">
+                                <!--                            <p><a href="https://wiki.hypixel.net/Main_Page">Skyblock Wiki Official</a></p>-->
+                                <!--                            <p><a href="https://hypixel-skyblock.fandom.com/wiki/Hypixel_SkyBlock_Wiki">Skyblock Wiki Fandom</a></p>-->
+                                <!--                            <p><a href="https://www.brandonfowler.me/skyblockah/?sort=lowest&bin=yes&player=brecht2202">SB AH - brandonfowler</a></p>-->
+                            </div>
+                        </div>
+
+                        <!--                    <hr>-->
+
+                        <!--                        === ___EMPTY___ ===-->
+                        <div class="main-grid-box-subcontainer-sub">
+                            <h2>Rockstar Games</h2>
+                            <hr>
+                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_RockstarGames">
+                                <p><a href="">Empty</a></p>
+                            </div>
+                        </div>
+
+                        <!--                    <hr>-->
+
+<!--                        &lt;!&ndash;                        === ___EMPTY___ ===&ndash;&gt;-->
+<!--                        <div class="main-grid-box-subcontainer-sub">-->
+<!--                            <h2>Game 3</h2>-->
+<!--                            <hr>-->
+<!--                            <div class="main-grid-box-links">-->
+<!--                                <p><a href="">Empty</a></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash;                    <hr>&ndash;&gt;-->
+
+<!--                        &lt;!&ndash;                        === ___EMPTY___ ===&ndash;&gt;-->
+<!--                        <div class="main-grid-box-subcontainer-sub">-->
+<!--                            <h2>Game 4</h2>-->
+<!--                            <hr>-->
+<!--                            <div class="main-grid-box-links">-->
+<!--                                <p><a href="">Empty</a></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- === === === === === === === === === === === === -->
+
+
+        <!-- === === === === === === === === === === === === -->
+        <div class="main-grid-row">
+
+<!--            === ___EMPTY___ === -->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>PXL</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_PXL">
+                        <p><a href="">Empty</a></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+<!--            === ___EMPTY___ ===-->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Stores</h1>
+                    </div>
+
+                    <hr>
+
+<!--                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_Stores">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+                    <div class="main-grid-box-subcontainer-vertical">
+
+                        <!--                        === Stores - Food Delivery ===-->
+                        <div class="main-grid-box-subcontainer-vertical-sub">
+                            <h2>Stores - Food Delivery</h2>
+                            <hr>
+                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_Stores_FoodDelivery">
+                                <p><a href="">Empty</a></p>
+                            </div>
+                        </div>
+
+                        <!--                        <hr>-->
+
+                        <!--                        === Stores - Stores - Main ===-->
+                        <div class="main-grid-box-subcontainer-vertical-sub">
+                            <h2>Stores - Main</h2>
+                            <hr>
+                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_Stores_Main">
+                                <p><a href="">Empty</a></p>
+                            </div>
+                        </div>
+
+                        <!--                        <hr>-->
+
+                        <!--                        === Stores - All ===-->
+<!--                        <div class="main-grid-box-subcontainer-vertical-sub">-->
+<!--                            <h2>All</h2>-->
+<!--                            <hr>-->
+<!--                            <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_Stores">-->
+<!--                                <p><a href="">Empty</a></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+<!--            === ___EMPTY___ ===-->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Links</h1>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-grid-box-links">
+                        <p><a href="">Empty</a></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- === === === === === === === === === === === === -->
+
+
+        <!-- === === === === === === === === === === === === -->
+        <div class="main-grid-row">
+
+<!--            === Handy Sites ===-->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Handy Sites</h1>
+                    </div>
+
+                    <hr>
+
+                    <h2>Toolbox</h2>
+
+                    <div class="main-grid-box-links">
+                        <p><a href="">Calculator</a></p>
+                        <p><a href="https://www.calculator.net/conversion-calculator.html">Conversion Calculator (1)</a></p>
+                        <p><a href="https://www.unitconverters.net/">Conversion Calculator (2)</a></p>
+                        <p><a href="https://htmlcolorcodes.com/">Color picker (htmlcolorcodes.com)</a></p>
+                        <p><a href="https://www.google.com/search?q=colorpicker">Color picker (Google Search)</a></p>
+                        <p><a href="https://www.google.com/s2/favicons?domain=_DOMAIN_&size=_SIZE_">https://www.google.com/s2/favicons?domain=_DOMAIN_&size=_SIZE_</a></p>
+                        <p><a href="https://api.statvoo.com/favicon/?url=_DOMAIN_&size=_SIZE_">https://api.statvoo.com/favicon/?url=_DOMAIN_&size=_SIZE_</a></p>
+
+                    </div>
+
+                    <h2>Youtube Converters</h2>
+
+                    <div class="main-grid-box-links">
+                        <p><a href="https://convert.io/">convert.io</a></p>
+                        <p><a href="https://www.clipconverter.cc">clipconverter.cc</a></p>
+                        <p><a href="https://onlinevideoconverter.pro/nl6/youtube-converter-mp3">onlinevideoconverter.pro</a></p>
+                        <p><a href="https://ytmp3.cc/">ytmp3.cc</a></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+<!--            === ___EMPTY___ === -->
+            <div class="main-grid-box">
+
+                <div class="main-grid-box-inner">
+
+                    <div class="main-grid-box-title">
+                        <h1>Google Maps</h1>
+                    </div>
+
+                    <hr>
+
+
+                    <div id="divElement_main-grid-box_GoogleMaps">
+                        <!--                                src="https://www.google.com/maps/embed"-->
+<!--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1299443.2064676287!2d3.345169550759049!3d50.49742280882683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17d64edf39797%3A0x47ebf2b439e60ff2!2zQmVsZ2nDqw!5e0!3m2!1snl!2sus!4v1656638057789!5m2!1snl!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+<!--                        <iframe-->
+<!--                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1299443.2064676287!2d3.345169550759049!3d50.49742280882683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17d64edf39797%3A0x47ebf2b439e60ff2!2zQmVsZ2nDqw!5e0!3m2!1snl!2sus!4v1656638057789!5m2!1snl!2sus"-->
+<!--                                width="600"-->
+<!--                                height="450"-->
+<!--                                style="border:0;"-->
+<!--                                allowfullscreen=""-->
+<!--                                loading="lazy"-->
+<!--                        ></iframe>-->
+                    </div>
+
+
+<!--                    <hr>-->
+
+
+                    <!--                            <iframe id="inlineFrameExample"-->
+                    <!--                                    title="Inline Frame Example"-->
+                    <!--                                    width="300"-->
+                    <!--                                    height="200"-->
+                    <!--                                    src="https://www.google.be/maps/">-->
+                    <!--                                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">-->
+                    <!--                            </iframe>-->
+
+                    <!--                            <div>-->
+                    <!--                                <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials">-->
+                    <!--                                </iframe>-->
+                    <!--                            </div>-->
+
+
+<!--                    <hr>-->
+
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+
+<!--                    </div>-->
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- === === === === === === === === === === === === -->
+
+
+
+
+
+
+
+
+
+
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+<!--        <div class="main-grid-row">-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ === &ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+
+
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+<!--        <div class="main-grid-row">-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+
+
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+<!--        <div class="main-grid-row">-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--&lt;!&ndash;            === ___EMPTY___ ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+
+
+
+
+
+
+        <!-- === === === === === NP SITES === === === === === -->
+        <div id="divElement_SiteCollection_NPSites">
+
+        </div>
+
+
+        <!-- === === === === === === === === === === === === -->
+
+
+
+
+        <!-- === === === === === ALL SITES === === === === === -->
+<!--        <div class="main-grid-row">-->
+
+<!--&lt;!&ndash;            === ALL SITES ===&ndash;&gt;-->
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>All Sites</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_AllSites">-->
+<!--                        &lt;!&ndash;                        <p><a href="">Empty</a></p>&ndash;&gt;-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+        <!-- === === === === === === === === === === === === -->
+
+
+
+
+
+
+
+
+<!--        === === === TEMPLATES === === ===        -->
+
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+<!--        <div class="main-grid-row">-->
+
+<!--            <div class="main-grid-box">-->
+
+<!--                <div class="main-grid-box-inner">-->
+
+<!--                    <div class="main-grid-box-title">-->
+<!--                        <h1>Links</h1>-->
+<!--                    </div>-->
+
+<!--                    <hr>-->
+
+<!--                    <div class="main-grid-box-links">-->
+<!--                        <p><a href="">Empty</a></p>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            -->
+<!--        </div>-->
+<!--        &lt;!&ndash; === === === === === === === === === === === === &ndash;&gt;-->
+
+
+
+
+
+
+
+
+
+
+
+<!--        &lt;!&ndash;            === MusicPlatforms ===&ndash;&gt;-->
+<!--        <div class="main-grid-box">-->
+
+<!--            <div class="main-grid-box-inner">-->
+
+<!--                <div class="main-grid-box-title">-->
+<!--                    <h1>Music Platforms</h1>-->
+<!--                </div>-->
+
+<!--                <hr>-->
+<!--                -->
+<!--                <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_MusicPlatforms">-->
+<!--                    &lt;!&ndash;                        <p><a href="">Empty</a></p>&ndash;&gt;-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+
+
+        <!--&lt;!&ndash;            === Video Sites === &ndash;&gt;-->
+        <!--            <div class="main-grid-box">-->
+
+        <!--                <div class="main-grid-box-inner">-->
+
+        <!--                    <div class="main-grid-box-title">-->
+        <!--                        <h1>Video Sites</h1>-->
+        <!--                    </div>-->
+
+        <!--                    <hr>-->
+
+        <!--                    <div class="main-grid-box-links" id="divElement_main-grid-box-links_SiteCollection_VideoSites">-->
+        <!--                        <p><a href="">Empty</a></p>-->
+        <!--                    </div>-->
+
+        <!--                </div>-->
+
+        <!--            </div>-->
+
+
+
+
+<!--        === === === === === === ===        -->
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+</body>
+</html>
