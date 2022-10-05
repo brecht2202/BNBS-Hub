@@ -1587,7 +1587,7 @@ StoreSites.push(Site_iBOOD);    // iBood
 StoreSites.push(Site_aaa);
 */
 // --------------------------------------
-let Site_Tweakers = createSiteObject("Tweakers","",iconPath_Root,"https://www.Tweakers.net/");
+let Site_Tweakers = createSiteObject("Tweakers","",iconPath_Root,"https://www.tweakers.net/");
 SiteCollection_AllSites.push(Site_Tweakers);
 // --------------------------------------
 let Site_Bol = createSiteObject("bol.com","",iconPath_Root,"https://www.bol.com/");
@@ -1656,19 +1656,19 @@ SiteCollection_AllSites.push(Site_SkyCrypt_brecht2202);
 
 
 // --------------------------------------
-let Site_RockstarGames = createSiteObject("Rockstar Games","RockstarGames.ico",iconPath_Root,"https://www.rockstargames.com/");
+let Site_RockstarGames = createSiteObject("Rockstar Games","rockstargames.ico",iconPath_Root,"https://www.rockstargames.com/");
 SiteCollection_AllSites.push(Site_RockstarGames);
 // --------------------------------------
-let Site_RockstarGames_Newswire = createSiteObject("Rockstar Games - Newswire","RockstarGames.ico",iconPath_Root,"https://www.rockstargames.com/newswire");
+let Site_RockstarGames_Newswire = createSiteObject("Rockstar Games - Newswire","rockstargames.ico",iconPath_Root,"https://www.rockstargames.com/newswire");
 SiteCollection_AllSites.push(Site_RockstarGames_Newswire);
 // --------------------------------------
-let Site_RockstarGames_Newswire_GTA = createSiteObject("Rockstar Games - Newswire GTA","RockstarGames.ico",iconPath_Root,"https://www.rockstargames.com/newswire?tag_id=702");
+let Site_RockstarGames_Newswire_GTA = createSiteObject("Rockstar Games - Newswire GTA","rockstargames.ico",iconPath_Root,"https://www.rockstargames.com/newswire?tag_id=702");
 SiteCollection_AllSites.push(Site_RockstarGames_Newswire_GTA);
 // --------------------------------------
-let Site_RockstarGames_Newswire_RDO = createSiteObject("Rockstar Games - Newswire RDO","RockstarGames.ico",iconPath_Root,"https://www.rockstargames.com/newswire?tag_id=736");
+let Site_RockstarGames_Newswire_RDO = createSiteObject("Rockstar Games - Newswire RDO","rockstargames.ico",iconPath_Root,"https://www.rockstargames.com/newswire?tag_id=736");
 SiteCollection_AllSites.push(Site_RockstarGames_Newswire_RDO);
 // --------------------------------------
-let Site_RockstarGames_GTAOnline = createSiteObject("Rockstar Games - GTA Online","RockstarGames.ico",iconPath_Root,"https://www.rockstargames.com/gta-online");
+let Site_RockstarGames_GTAOnline = createSiteObject("Rockstar Games - GTA Online","rockstargames.ico",iconPath_Root,"https://www.rockstargames.com/gta-online");
 SiteCollection_AllSites.push(Site_RockstarGames_GTAOnline);
 // --------------------------------------
 let Site_Youtube_Gtamen = createSiteObject("Youtube - Gtamen","youtube.png",iconPath_Root,"https://www.youtube.com/user/TheLibertyLunatic/videos");
@@ -1687,7 +1687,7 @@ SiteCollection_AllSites.push(Site_Youtube_Gtamen);
 
 // --------------------------------------
 // let Site_PXL_BlackBoard = createSiteObject("PXL - BlackBoard","PXL_BlackBoard.png",iconPath_Root,"https://www.pxl.be/");
-let Site_PXL = createSiteObject("PXL","PXL.png",iconPath_Root,"https://www.pxl.be/");
+let Site_PXL = createSiteObject("PXL","pxl.png",iconPath_Root,"https://www.pxl.be/");
 // let Site_PXL = createSiteObject("PXL","",iconPath_Root,"https://www.pxl.be/");
 SiteCollection_AllSites.push(Site_PXL);
 // --------------------------------------
@@ -1708,12 +1708,12 @@ let Site_PXL_BlackBoard_AlgemeneCursussen = createSiteObject("BlackBoard - Algem
 SiteCollection_AllSites.push(Site_PXL_BlackBoard_AlgemeneCursussen);
 // --------------------------------------
 // let Site_PXL_MyTimetable = createSiteObject("PXL - MyTimetable","PXL_MyTimetable.png",iconPath_Root,"https://mijnlessenrooster.pxl.be/schedule");
-let Site_PXL_MyTimetable = createSiteObject("MyTimetable","PXL.png",iconPath_Root,"https://mijnlessenrooster.pxl.be/schedule");
+let Site_PXL_MyTimetable = createSiteObject("MyTimetable","pxl.png",iconPath_Root,"https://mijnlessenrooster.pxl.be/schedule");
 // let Site_PXL_MyTimetable = createSiteObject("MyTimetable","",iconPath_Root,"https://mijnlessenrooster.pxl.be/schedule");
 SiteCollection_AllSites.push(Site_PXL_MyTimetable);
 // --------------------------------------
 // let Site_PXL_MijnPXL = createSiteObject("PXL - MijnPXL","PXL_MijnPXL.png",iconPath_Root,"https://mijnpxl.pxl.be/Main.aspx");
-let Site_PXL_MijnPXL = createSiteObject("MijnPXL","PXL.png",iconPath_Root,"https://mijnpxl.pxl.be/Main.aspx");
+let Site_PXL_MijnPXL = createSiteObject("MijnPXL","pxl.png",iconPath_Root,"https://mijnpxl.pxl.be/Main.aspx");
 // let Site_PXL_MijnPXL = createSiteObject("MijnPXL","",iconPath_Root,"https://mijnpxl.pxl.be/Main.aspx");
 SiteCollection_AllSites.push(Site_PXL_MijnPXL);
 // --------------------------------------
@@ -1723,7 +1723,7 @@ SiteCollection_AllSites.push(Site_PXL_MijnPXL);
 // SiteCollection_AllSites.push(Site_PXL_MijnPXL_MijnOpleidingsonderdelen);
 // --------------------------------------
 // let Site_PXL_MijnSLB = createSiteObject("PXL - MijnSLB","PXL_MijnSLB.png",iconPath_Root,"https://mijnslb.pxl.be/Forms/Home.aspx");
-let Site_PXL_MijnSLB = createSiteObject("MijnSLB","PXL.png",iconPath_Root,"https://mijnslb.pxl.be/Forms/Home.aspx");
+let Site_PXL_MijnSLB = createSiteObject("MijnSLB","pxl.png",iconPath_Root,"https://mijnslb.pxl.be/Forms/Home.aspx");
 // let Site_PXL_MijnSLB = createSiteObject("MijnSLB","",iconPath_Root,"https://mijnslb.pxl.be/Forms/Home.aspx");
 SiteCollection_AllSites.push(Site_PXL_MijnSLB);
 // --------------------------------------
@@ -1733,7 +1733,7 @@ let Site_PXL_Mail = createSiteObject("PXL Mail","",iconPath_Root,"https://outloo
 SiteCollection_AllSites.push(Site_PXL_Mail);
 // --------------------------------------
 // let Site_PXL_EPOS = createSiteObject("PXL - EPOS","PXL_EPOS.png",iconPath_Root,"https://epos.pxl.be/");
-let Site_PXL_EPOS = createSiteObject("EPOS","PXL.png",iconPath_Root,"https://epos.pxl.be/");
+let Site_PXL_EPOS = createSiteObject("EPOS","pxl.png",iconPath_Root,"https://epos.pxl.be/");
 // let Site_PXL_EPOS = createSiteObject("EPOS","",iconPath_Root,"https://epos.pxl.be/");
 SiteCollection_AllSites.push(Site_PXL_EPOS);
 // --------------------------------------
